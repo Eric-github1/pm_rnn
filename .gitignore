@@ -1,3 +1,17 @@
+# Prerequisites
+*.d
+.vscode/*
+.git/*
+*.[oa]
+*.apk
+bin/
+gen/
+build/
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -5,6 +19,19 @@ __pycache__/
 
 # C extensions
 *.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
 
 # Distribution / packaging
 .Python
@@ -68,9 +95,6 @@ docs/_build/
 
 # PyBuilder
 target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
 
 # pyenv
 .python-version
