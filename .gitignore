@@ -9,6 +9,10 @@ gen/
 build/
 .idea/
 chapter_12_RNN/*
+# model/
+model-*
+checkpoint
+*.pkl
 
 # Jupyter Notebook
 .ipynb_checkpoints

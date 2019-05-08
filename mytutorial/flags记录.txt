@@ -1,0 +1,24 @@
+mf = FLAGS.flag_values_dict()  解析FLAGS 成字典
+
+FLAGS._flags() 返回flag的一个字典，但是字典列表内key就是name，但是值不是我们要的值，要通过['num_seqs'].value)才能读到
+
+print(FLAGS._flags().keys())
+print(FLAGS._flags().values())
+
+可以通过字典的 keys() 和 values() 获取键和值，再把值用.value读出来
+
+原函数中的 six.iteritems(FLAGS._flags()) 这个函数
+
+    print(six.iteritems(FLAGS._flags()))
+    for name, flag in six.iteritems(FLAGS._flags()):
+        print(name, flag)
+        print(name, flag.value)
+
+其实就是字典的遍历，也可以得到name 和 .value获取值
+
+总结，直接用 mf = FLAGS.flag_values_dict() 就可以了。
+
+这是结果
+{'num_seqs': 100, 'num_steps': 100, 'lstm_size': 128, 'f': '/run/user/1000/jupyter/kernel-53e78e6d-6657-4bec-80ba-dffd5b49f39f.json'}
+
+tensorflow version:  1.7.0 （gpu）
